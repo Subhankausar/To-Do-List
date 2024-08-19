@@ -135,4 +135,10 @@ const editLocalTodos = (todo) => {
 
 document.addEventListener('DOMContentLoaded', getLocalTodos);
 addBtn.addEventListener('click', addTodo);
+
+inputBox.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    addTodo();
+  }
+});
 todoList.addEventListener('click', updateTodo);
